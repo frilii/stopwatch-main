@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cronômetro</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #141e30, #243b55);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  #timer {
+    font-size: 3em;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 254, 254, 0.445);
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.3);
+  }
+  #controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #2980b9;
+  }
+  #lapContainer {
+    margin-top: 20px;
+  }
+  #lapList {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow: auto;
+  }
+  .lapItem {
+    background-color: #444;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+</head>
+<body>
+<div id="timer">00:00:00</div>
+<div id="controls">
+  <button id="startButton">Iniciar</button>
+  <button id="stopButton">Parar</button>
+  <button id="resetButton">Reiniciar</button>
+  <button id="lapButton">Volta</button>
+</div>
+<div id="lapContainer">
+  <ul id="lapList"></ul>
+</div>
+<script>
+</script>
+</body>
+</html>
